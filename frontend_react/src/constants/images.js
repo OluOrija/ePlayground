@@ -35,6 +35,15 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+import csharp from '../assets/csharp.png';
+import powershell from '../assets/powershell.png';
+import bash from '../assets/bash.png';
+import azuredevops from '../assets/azuredevops.png';
+import azure from '../assets/azure.png';
+import aws from '../assets/aws.png';
+import sitecore from '../assets/sitecore.png';
+
+
 export default {
   email,
   mobile,
@@ -69,4 +78,11 @@ export default {
   nb,
   skype,
   spotify,
+  csharp,
+  powershell,
+  bash,
+  azuredevops,
+  azure,
+  aws,
+  sitecore,
 };
