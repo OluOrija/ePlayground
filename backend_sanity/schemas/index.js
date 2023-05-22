@@ -1,5 +1,5 @@
 
-import projects from './projects'
+import works from './works'
 import testimonials from './testimonials'
 import brands from './brands'
 import abouts from './abouts'
@@ -9,4 +9,4 @@ import workExperience from './workExperience'
 import contact from './contact'
 
 
-export const schemaTypes = [projects, testimonials, brands, abouts, skills, workExperience, experiences, contact]
+export const schemaTypes = [works, testimonials, brands, abouts, skills, workExperience, experiences, contact]
