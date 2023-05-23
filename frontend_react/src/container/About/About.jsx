@@ -1,24 +1,25 @@
-import React, {useState, useEffect} from 'react';
-import {motion} from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-import {images} from '../../constants'
+import { images } from '../../constants';
 import './About.scss';
-
-const abouts = [
-  { title: 'C# and .Net Full Stack Developer', description: 'I am a good full stack developer', imgUrl: images.about01},
-  { title: 'Sitecore CMS Specialist', description: 'I have experience implementing, upgrading and migrating sitecore solutions', imgUrl: images.sitecorelogoexperience},
-  { title: 'DevOps Engineer', description: 'I am an experienced devops engineer', imgUrl: images.devopsengineer},
-  { title: 'Freelancer', description: 'I can take the initiative and deliver projects', imgUrl: images.about04},
-]
+import { urlFor, client } from '../../client';
 
 const About = () => {
+
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
-    <h2 className='head-text'>
-      <span>Rethink..</span>
-      <span> Reimagine..</span>        
-      <span> Reinvent</span>
-    </h2>
+    <h2 className='head-text'>Rethink..<span> Reimagine.. </span><br/>Reinvent</h2>
 
     <div className='app__profiles'>
       {abouts.map((about, index) => (
@@ -29,7 +30,7 @@ const About = () => {
           className='app__profile-item'
           key={about.title + index}
         >
-          <img src={about.imgUrl} alt={about.title}/>
+          <img src={urlFor(about.imgUrl)} alt={about.title} />
           <h2 className='bold-text' style={{marginTop: 20}}>{about.title}</h2>
           <p className='p-text' style={{marginTop: 10}}>{about.description}</p>
         </motion.div>
