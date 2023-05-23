@@ -33,10 +33,18 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
+          expertise as
           <p className="p-text">C# and .Net Full stack developer </p>
           <p className="p-text">Sitecore CMS specialist</p>
           <p className="p-text">DevOps Engineer</p>
           <p className="p-text">Freelancer</p>
+        </div>
+
+        <div className="tag-cmp app__flex">
+          focus areas are
+          <p className="p-text">Digital Transformation </p>
+          <p className="p-text">Cloud Migration</p>
+          <p className="p-text">DevOps</p>
         </div>
       </div>
     </motion.div>
@@ -61,7 +69,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.csharp, images.powershell, images.bash, images.azuredevops, images.azure, images.aws, images.sitecore, images.terraform].map((circle, index) => (
+      {[images.digitaltransformation, images.migration, images.devopslogo].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>

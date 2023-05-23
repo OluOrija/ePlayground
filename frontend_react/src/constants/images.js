@@ -45,6 +45,9 @@ import sitecore from '../assets/sitecore.png';
 import sitecorelogoexperience from '../assets/sitecore-logo-experience.jpg';
 import devopsengineer from '../assets/devops-engineer.png';
 import terraform from '../assets/Terraform-logo.png';
+import migration from '../assets/migration.png';
+import devopslogo from '../assets/devops-logo.png';
+import digitaltransformation from '../assets/digitaltransformation.png';
 
 
 export default {
@@ -91,4 +94,7 @@ export default {
   sitecorelogoexperience,
   devopsengineer,
   terraform,
+  migration,
+  devopslogo,
+  digitaltransformation,
 };
