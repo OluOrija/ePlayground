@@ -42,8 +42,9 @@ import azuredevops from '../assets/azuredevops.png';
 import azure from '../assets/azure.png';
 import aws from '../assets/aws.png';
 import sitecore from '../assets/sitecore.png';
-import sitecorelogoexperience from '../assets/sitecore-logo-experience.jpg'
-import devopsengineer from '../assets/devops-engineer.png'
+import sitecorelogoexperience from '../assets/sitecore-logo-experience.jpg';
+import devopsengineer from '../assets/devops-engineer.png';
+import terraform from '../assets/Terraform-logo.png';
 
 
 export default {
@@ -89,4 +90,5 @@ export default {
   sitecore,
   sitecorelogoexperience,
   devopsengineer,
+  terraform,
 };
