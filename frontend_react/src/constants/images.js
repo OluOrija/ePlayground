@@ -42,6 +42,8 @@ import azuredevops from '../assets/azuredevops.png';
 import azure from '../assets/azure.png';
 import aws from '../assets/aws.png';
 import sitecore from '../assets/sitecore.png';
+import sitecorelogoexperience from '../assets/sitecore-logo-experience.jpg'
+import devopsengineer from '../assets/devops-engineer.png'
 
 
 export default {
@@ -85,4 +87,6 @@ export default {
   azure,
   aws,
   sitecore,
+  sitecorelogoexperience,
+  devopsengineer,
 };
