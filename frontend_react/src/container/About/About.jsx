@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
 
@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <>
-    <h2 className='head-text'>Rethink..<span> Reimagine.. </span><br/>Reinvent</h2>
+    <h2 className='head-text'><br/>Rethink..<span> Reimagine.. </span><br/>Reinvent</h2>
 
     <div className='app__profiles'>
       {abouts.map((about, index) => (
@@ -40,4 +40,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrap(About, 'about');

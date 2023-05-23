@@ -16,4 +16,4 @@ const NavigationDots = ({ active }) => (
   </div>
 );
 
-export default NavigationDots;
+export default NavigationDots; 
