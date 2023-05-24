@@ -1,0 +1,26 @@
+Deploying react frontend_react
+    signup to netlify.com
+    return to project in vs code
+    run 'npm run build' from inside /frontend_react project
+    then drag and drop /build folder to netlify
+
+
+Deploying sanity backend
+    cd into /backend_sanity
+    run 'sanity manage'
+    browse to the API tab
+    Select 'Add CORS origin'
+    Copy the URL from your Netlify app
+    Add the url to the CORs origin 
+    and 'select 'Allow Credentials'
+    Then save.
+
+
+Hosting sanity backend
+    Ref: https://www.sanity.io/docs/deployment
+    cd to /backend_sanity
+    run 'sanity deploy'
+    specify hostname when prompted e.g 'https://oluorija.sanity.studio/'
+    That's it.
+    TODO: Access controls
+
