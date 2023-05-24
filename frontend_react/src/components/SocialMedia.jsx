@@ -1,17 +1,25 @@
 import React from 'react';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
+import { BsTwitter } from 'react-icons/bs';
+import { FaChessBishop, FaGithub } from 'react-icons/fa';
+import { SiLichess } from 'react-icons/si';
 
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <BsTwitter />
+      <a href='https://github.com/OluOrija' target="_blank" rel="noreferrer">
+      <FaGithub /></a>
     </div>
     <div>
-      <FaFacebookF />
+      <a href='https://twitter.com/olu_ninja' target="_blank" rel="noreferrer">
+      <BsTwitter /></a>
     </div>
     <div>
-      <BsInstagram />
+      <a href='https://www.chess.com/member/ekelola' target="_blank" rel="noreferrer">
+      <FaChessBishop /></a>
+    </div>
+    <div>
+      <a href='https://lichess.org/@/ekelola' target="_blank" rel="noreferrer">
+      <SiLichess /></a>
     </div>
   </div>
 );
