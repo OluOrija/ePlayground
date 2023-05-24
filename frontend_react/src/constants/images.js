@@ -50,7 +50,7 @@ import devopslogo from '../assets/devops-logo.png';
 import digitaltransformation from '../assets/digitaltransformation.png';
 
 
-export default {
+const images = {
   email,
   mobile,
   api,
@@ -98,3 +98,5 @@ export default {
   devopslogo,
   digitaltransformation,
 };
+
+export default images;
