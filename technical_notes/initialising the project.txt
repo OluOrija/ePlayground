@@ -15,7 +15,7 @@ SANITY BACKEND
         create .env file
         set projectId as REACT_APP_SANITY_PROJECTID in .env file
         set token as REACT_APP_SANITY_TOKEN in .env file
-        set projectId is sanity.cli.js
+        set projectId in sanity.cli.js
         set projectId in sanity.config.js
         set dataset in sanity.config.js
         create schema files.
@@ -38,3 +38,12 @@ REACT FRONTEND
         cd frontend_react
         npm install @sanity/client @sanity/image-url framer-motion node-sass react-icons    
 
+
+DEPLOYING
+    To build     
+        cd <frontend_react>
+        run 'npm run build'
+        drag and drop build folder to netlify
+        Add netlify hostname to sanity CORs origins in sanity backend by running 'sanity manage' from sanity backend folder
+        Add custom domain in netlify
+        Add custom hostname to CORs origin list
