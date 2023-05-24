@@ -1,0 +1,40 @@
+Ref: https://www.youtube.com/watch?v=3HNyXCPDQ7Q
+Sanity: https://www.sanity.io/docs/create-a-sanity-project
+
+GITHUB
+    create github repo
+    checkout repo locally
+
+SANITY BACKEND
+    Create backend_sanity folder
+
+    To initiate backend
+        npm create sanity@latest -- --template clean --create-project "Sanity Project" --dataset <project_name-env>
+
+    Other steps
+        create .env file
+        set projectId as REACT_APP_SANITY_PROJECTID in .env file
+        set token as REACT_APP_SANITY_TOKEN in .env file
+        set projectId is sanity.cli.js
+        set projectId in sanity.config.js
+        set dataset in sanity.config.js
+        create schema files.
+
+    To run backend
+        cd sanity-project
+        npm run dev
+
+    To deploy for pucblic accessibility
+        cd <project-folder>
+        run 'sanity deploy'
+        provide hostname    
+
+
+REACT FRONTEND
+    To initiate project
+        run 'npx create-react-app frontend_react'
+
+    To run application
+        cd frontend_react
+        npm install @sanity/client @sanity/image-url framer-motion node-sass react-icons    
+
