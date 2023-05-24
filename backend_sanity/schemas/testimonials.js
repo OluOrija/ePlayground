@@ -14,7 +14,7 @@ export default{
             type: 'string',            
         },
         {
-            name: 'imaeurl',
+            name: 'imgurl',
             title: 'ImgURL',
             type: 'image',            
             options: {
