@@ -8,16 +8,26 @@ import './Work.scss';
 
 const Work = () => {
   const [works, setWorks] = useState([]);
+  const [workFilters, setWorkFilters] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     const query = '*[_type == "works"]';
+    const queryFilters = '*[_type == "workFilters"]';
 
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
+    });
+
+    client.fetch(queryFilters).then((data) => {
+      console.log(data);
+      setWorkFilters(data);
+
+      var all = {name:"All", type:"workFilters"}
+      workFilters.indexOf(all) === -1 ?? workFilters.push(all); 
     });
   }, []);
 
@@ -39,14 +49,14 @@ const Work = () => {
     <>
       <h2 className="head-text">My Experiments <span>Portfolio</span> Section</h2>
 
-      <div className="app__work-filter">
-        {['Web Apps', 'APIs', 'CMS', 'Containerisation', 'IaC', 'All'].map((item, index) => (
+      <div className="app__work-filter">        
+      {workFilters.map((item, index) =>  ( 
           <div
             key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+            onClick={() => handleWorkFilter(item.name)}
+            className={`app__work-filter-item app__flex p-text ${activeFilter === item.name ? 'item-active' : ''}`}
           >
-            {item}
+            {item.name}
           </div>
         ))}
       </div>

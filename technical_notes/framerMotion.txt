@@ -1,3 +1,0 @@
-Ref:
-https://www.framer.com/motion/ (https://www.framer.com/learn/what-is-framer/)
-https://www.npmjs.com/package/framer-motion
