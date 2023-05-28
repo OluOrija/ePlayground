@@ -22,13 +22,10 @@ const Work = () => {
       setFilterWork(data);
     });
 
-    client.fetch(queryFilters).then((data) => {
-      console.log(data);
+    client.fetch(queryFilters).then((data) => {      
       setWorkFilters(data);
-
-      var all = {name:"All", type:"workFilters"}
-      workFilters.indexOf(all) === -1 ?? workFilters.push(all); 
     });
+
   }, []);
 
   const handleWorkFilter = (item) => {
