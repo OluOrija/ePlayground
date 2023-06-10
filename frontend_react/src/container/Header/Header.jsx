@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
+import { urlFor, client } from '../../client';
 
 const scaleVariants = {
   whileInView: {
@@ -16,7 +17,20 @@ const scaleVariants = {
   },
 };
 
-const Header = () => (
+const Header = () => {
+  const [certifications, setCertifications] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "certifications"]';
+
+    client.fetch(query).then((data) => {
+      console.log(data);
+      setCertifications(data);
+    });
+	
+  }, [])
+
+return (
   <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -69,13 +83,14 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.digitaltransformation, images.migration, images.devopslogo].map((circle, index) => (
+      {certifications.map((certification, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
+          <img src={urlFor(certification.badgeIcon)} alt={certification.title} />
         </div>
       ))}
     </motion.div>
   </div>
 );
+};
 
 export default AppWrap(Header, 'home');

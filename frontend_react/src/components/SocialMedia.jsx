@@ -10,7 +10,7 @@ const SocialMedia = () => (
       <FaGithub /></a>
     </div>
     <div>
-      <a href='https://twitter.com/olu_ninja' target="_blank" rel="noreferrer">
+      <a href='https://twitter.com/_ekelola' target="_blank" rel="noreferrer">
       <BsTwitter /></a>
     </div>
     <div>
