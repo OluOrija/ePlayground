@@ -14,7 +14,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works" && showOnFrontEnd == true]';
     const queryFilters = '*[_type == "workFilters"]';
 
     client.fetch(query).then((data) => {
@@ -44,7 +44,7 @@ const Work = () => {
   };
   return (
     <>
-      <h2 className="head-text">My Experiments <span>Portfolio</span> Section</h2>
+      <h2 className="head-text">My <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">        
       {workFilters.map((item, index) =>  ( 

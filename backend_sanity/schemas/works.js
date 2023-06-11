@@ -32,7 +32,6 @@ export default {
         hotspot: true,
       },
     },
- 
     {
       name: 'tags',
       title: 'Tags',
@@ -45,6 +44,10 @@ export default {
        }
      ]
     },
-   
+    {
+      title: 'Show on Front-End?',
+      name: 'showOnFrontEnd',
+      type: 'boolean'
+    }, 
   ],
 };
