@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsTwitter } from 'react-icons/bs';
 import { FaChessBishop, FaGithub } from 'react-icons/fa';
 import { SiLichess } from 'react-icons/si';
 
